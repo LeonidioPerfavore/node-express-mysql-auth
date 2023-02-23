@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../icons/fingerprint.png" type="image/x-icon" />
+    <!--  Main css  -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Node/Express JWT Auth</title>
+</head>
+<body>
+<div class="section bg-dark">
+
+    <div class="header">
+        <!--  Link to LOGIN PAGE  -->
+        <div class="sign-in-link cursor-pointer">
+            <span>Already have an account?</span>
+            <a href="/login">login</a>
+        </div>
+        <!--  LOGO  -->
+        <div class="main-logo cursor-pointer">
+            <p>A</p>
+        </div>
+    </div>
+
+    <div class="registration-dom" id="registration-dom">
+        <div class="registration-block">
+            <!-- EMAIL -->
+            <label for="email-registration-inp">
+                <h4 class="input-label">Enter you email</h4>
+                <div class="d-flex">
+                    <span id="email-registration-icon" class="arrow-right"></span>
+                    <input
+                            type="text"
+                            value=""
+                            class="email-input input bg-dark-blue"
+                            id="email-registration-inp"
+                            maxlength="100"
+                            name="email"
+                            autocomplete="off"
+                    >
+                </div>
+            </label>
+            <button id="continue-btn" type="button" disabled class="continue-btn d-block">Continue</button>
+
+            <!-- PASSWORD -->
+            <label for="password-registration-inp">
+                <h4 class="input-label d-none" id="create-password-label">Create a password</h4>
+
+                <div class="d-none" id="password-registration-block">
+                    <span class="arrow-right" id="password-registration-icon"></span>
+                    <input
+                            type="password"
+                            value=""
+                            class="password-input input bg-dark-blue"
+                            id="password-registration-inp"
+                            maxlength="100"
+                            name="password"
+                            autocomplete="off"
+                    >
+                    <div id="svg-password-wrapper" onclick="showHidePassword()">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye svg-icon" viewBox="0 0 16 16"> <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/> <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/> </svg>
+                    </div>
+                </div>
+            </label>
+            <button id="continue-btn-2" type="button" disabled class="continue-btn d-none">Continue</button>
+
+            <!-- NAME -->
+            <label for="name-registration-inp">
+                <h4 class="input-label d-none" id="create-name-label">Add you name</h4>
+                <div class="d-none" id="name-registration-block">
+                    <span class="arrow-right" id="name-registration-icon"></span>
+                    <input
+                            type="password"
+                            value=""
+                            class="password-input input bg-dark-blue"
+                            id="name-registration-inp"
+                            maxlength="60"
+                            name="password"
+                            autocomplete="off"
+                    >
+                </div>
+            </label>
+            <button id="register-submit-btn" type="button" disabled class="continue-btn d-none">Register</button>
+
+        </div>
+        <!--  Validate message -->
+        <h4 class="validate-msg" id="validate-message"></h4>
+    </div>
+    <!-- Success registration message -->
+    <div id="registration-success-message" class="d-none">
+        <h4>An email has been sent to the specified email address to complete registration.</h4>
+    </div>
+
+</div>
+<!-- axios -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../js/registration.js"></script>
+</body>
+</html>

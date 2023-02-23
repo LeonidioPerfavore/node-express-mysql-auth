@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../icons/fingerprint.png" type="image/x-icon" />
+    <!--  Main css  -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Node/Express JWT Auth</title>
+</head>
+<body>
+
+<div class="section bg-light">
+
+    <div class="login-dom">
+        <!-- LOGO -->
+        <div class="d-flex jc-center">
+            <div class="cursor-pointer dark-logo">
+                <p>A</p>
+            </div>
+        </div>
+        <!-- HEADER -->
+        <div class="d-flex jc-center mt-15">
+            <h1>Login</h1>
+        </div>
+        <!-- VALIDATE MSG  -->
+        <div class="d-flex jc-center mt-15">
+            <div class="validate-login-msg opacity-0" id="validate-login-msg"></div>
+        </div>
+        <!-- LOGIN -->
+        <div class="d-flex jc-center mt-15">
+            <div class="login-form">
+                <label>Enter email
+                    <input type="text" class="login-input" id="email-login">
+                </label>
+                <br>
+                <label>Enter password
+                    <input type="password" class="login-input" id="password-login">
+                </label>
+                <br>
+                <button class="login-submit" onclick="login()">Login</button>
+            </div>
+        </div>
+        <!-- Link to registration -->
+        <div class="d-flex jc-center mt-15">
+            <a href="/registration">Registration</a>
+        </div>
+    </div>
+
+</div>
+<!-- axios -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../js/login.js"></script>
+</body>
+</html>
